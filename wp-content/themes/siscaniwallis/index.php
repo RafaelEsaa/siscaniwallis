@@ -1,17 +1,7 @@
-
-<html>
-    <header>
-    <?php wp_head();?>
-    </header>
-    <body>
+<?php get_header(); ?>
     <div class="row full-width">
         <div class="col-md-12">
-            <p>Holaaa</p>
+            <p class="prueba">Holaaa</p>
         </div>
     </div>        
-        <p class="prueba">HOLA RAFAEL!</p>
-        <footer>
-            <?php wp_footer();?>
-        </footer>
-    </body>
-</html>
+<?php get_footer(); ?>
