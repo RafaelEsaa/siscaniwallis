@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 const path = require('path');
 
 // include the js minification plugin
@@ -6,12 +7,13 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 // include the css extraction and minification plugins
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: ['./js/src/app.js', './css/src/app.scss'],
   output: {
-    filename: './js/build/app.js',
-    path: path.resolve(__dirname)
+    path: path.resolve(__dirname),
+    filename: './js/build/app.min.js'
   },
   module: {
     rules: [
@@ -30,6 +32,10 @@ module.exports = {
       {
         test: /\.(sass|scss)$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.exec\.js$/,
+        use: ['script-loader']
       }
     ]
   },
@@ -37,7 +43,12 @@ module.exports = {
     // extract css into dedicated file
     new MiniCssExtractPlugin({
       filename: './css/build/main.min.css'
-    })
+    }),
+    //new CleanWebpackPlugin(['./js/build/*','./css/build/*']),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+     })
   ],
   optimization: {
     minimizer: [
