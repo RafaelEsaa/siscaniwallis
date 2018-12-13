@@ -9,14 +9,18 @@
                 $count = 0;
                 while ( $loop->have_posts() ) : $loop->the_post();
                     $count ++; ?>
-                    <div class="carousel-item <?php if($count == 1){ echo 'active'; }?>">
+                    <div class="carousel-item <?php if($count == 1){ echo 'active'; }?>"
+                        style="background-image: url('<?php the_field('imagen'); ?>');
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                height: 100vh;">
                         <div class="title-carousel-home">
                             <div class="text-carousel-home">
                                 <?php the_content(); ?>
                             </div>
                             <button class="btn-carousel"><?php the_field('title_button')?></button>
                         </div>
-                        <img class=" w-100 img-carousel" src="<?php the_field('imagen'); ?>" alt="First slide">
                     </div>
                 <?php
                 endwhile;
@@ -44,22 +48,26 @@
         <hr class="line-title">
         <h2 class="sub-title text-center">Más exclusivas de europa</h2>
         <div class="card-columns">
-<?php 
-$args = array( 'post_type' => 'masongrid', 'posts_per_page' => 10 );
-$loop = new WP_Query( $args );
+        <?php 
+        $args = array( 'post_type' => 'masongrid', 'posts_per_page' => 10 );
+        $loop = new WP_Query( $args );
 
-while ( $loop->have_posts() ) : $loop->the_post();
-$image = get_field('image');
-$size = 'full'; // (thumbnail, medium, large, full or custom size)?>
-    <div class="card">
-        <img class="card-img" src="<?php the_field('image'); ?>" />
-        <div class="card-img-hover" id="<?php the_title()?>" onmouseover="onMouse(this)" onmouseout="onMouseOut(this)">
-            <img class="img-hover" src="<?php the_field('icon'); ?>" style="visibility: hidden"/>
-        </div>
-    </div>
-<?php
-endwhile;
-?>
+        while ( $loop->have_posts() ) : $loop->the_post();
+        $image = get_field('image');
+        $size = 'full'; // (thumbnail, medium, large, full or custom size)?>
+            <div class="card" onmouseover=overBgBlack(this) onmouseout=outBgBlack(this)>
+                <img class="card-img" src="<?php the_field('image'); ?>" />
+                <div class="bg-black"></div>
+                <div class="card-img-hover" 
+                    id="<?php the_title()?>" 
+                    onmouseover="onMouse(this)" 
+                    onmouseout="onMouseOut(this)">
+                    <img class="img-hover" src="<?php the_field('icon'); ?>" style="visibility: hidden"/>
+                </div>
+            </div>
+        <?php
+        endwhile;
+        ?>
         </div>
         </div>
     </div>
@@ -72,7 +80,7 @@ endwhile;
             <?php if (have_posts()) {
                 while (have_posts()) {
                     the_post();
-                    the_content(); 
+                    the_content();
                 }
             } ?>
         </div>

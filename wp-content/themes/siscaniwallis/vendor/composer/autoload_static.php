@@ -6,18 +6,113 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit14a5b9a410290132d9561dd8e5fcb90c
 {
+    public static $files = array (
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '19b4cf79786b18122ab82ccfd1893880' => __DIR__ . '/..' . '/nicklasw/instagram-api/src/Support/functions.php',
+        'ac21474f886766eddb924f44fd24630b' => __DIR__ . '/..' . '/nicklasw/instagram-api/src/Support/definitions.php',
+        '6e96adc657e1793c71294108d0502523' => __DIR__ . '/..' . '/nicklasw/instagram-api/src/Support/Promises/functions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'W' => 
+        array (
+            'Webmozart\\Assert\\' => 17,
+        ),
         'P' => 
         array (
+            'Psr\\Http\\Message\\' => 17,
             'PostTypes\\' => 10,
+        ),
+        'I' => 
+        array (
+            'Instagram\\SDK\\' => 14,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
+        ),
+        'C' => 
+        array (
+            'Common\\' => 7,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Webmozart\\Assert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
         'PostTypes\\' => 
         array (
             0 => __DIR__ . '/..' . '/jjgrainger/posttypes/src',
         ),
+        'Instagram\\SDK\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nicklasw/instagram-api/src',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/runz0rd/common-php/src/Common',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'J' => 
+        array (
+            'JsonMapper' => 
+            array (
+                0 => __DIR__ . '/..' . '/netresearch/jsonmapper/src',
+            ),
+        ),
+    );
+
+    public static $classMap = array (
+        'Mapper\\IModelMapper' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Mapper/IModelMapper.php',
+        'Mapper\\ModelMapper' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Mapper/ModelMapper.php',
+        'Mapper\\ModelMapperException' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Mapper/ModelMapperException.php',
+        'Mapper\\XmlModelMapper' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Mapper/XmlModelMapper.php',
+        'Traits\\ConvertibleTrait' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Traits/ConvertibleTrait.php',
+        'Traits\\MappableTrait' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Traits/MappableTrait.php',
+        'Traits\\ValidatableTrait' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Traits/ValidatableTrait.php',
+        'Validator\\IRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/IRule.php',
+        'Validator\\ModelValidator' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/ModelValidator.php',
+        'Validator\\ModelValidatorException' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/ModelValidatorException.php',
+        'Validator\\Rules\\ArrayRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/ArrayRule.php',
+        'Validator\\Rules\\BooleanArrayRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/BooleanArrayRule.php',
+        'Validator\\Rules\\BooleanRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/BooleanRule.php',
+        'Validator\\Rules\\DoubleArrayRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/DoubleArrayRule.php',
+        'Validator\\Rules\\DoubleRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/DoubleRule.php',
+        'Validator\\Rules\\EmailRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/EmailRule.php',
+        'Validator\\Rules\\FloatRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/FloatRule.php',
+        'Validator\\Rules\\IntegerArrayRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/IntegerArrayRule.php',
+        'Validator\\Rules\\IntegerRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/IntegerRule.php',
+        'Validator\\Rules\\IpRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/IpRule.php',
+        'Validator\\Rules\\ObjectArrayRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/ObjectArrayRule.php',
+        'Validator\\Rules\\ObjectRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/ObjectRule.php',
+        'Validator\\Rules\\RequiredRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/RequiredRule.php',
+        'Validator\\Rules\\StringArrayRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/StringArrayRule.php',
+        'Validator\\Rules\\StringRule' => __DIR__ . '/..' . '/runz0rd/mapper-php/src/Validator/Rules/StringRule.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -25,6 +120,8 @@ class ComposerStaticInit14a5b9a410290132d9561dd8e5fcb90c
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit14a5b9a410290132d9561dd8e5fcb90c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit14a5b9a410290132d9561dd8e5fcb90c::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit14a5b9a410290132d9561dd8e5fcb90c::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit14a5b9a410290132d9561dd8e5fcb90c::$classMap;
 
         }, null, ClassLoader::class);
     }

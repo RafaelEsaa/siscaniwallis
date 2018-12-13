@@ -1,5 +1,6 @@
 {
     "require": {
-        "jjgrainger/posttypes": "^2.0"
+        "jjgrainger/posttypes": "^2.0",
+        "nicklasw/instagram-api": "^0.8.0"
     }
 }

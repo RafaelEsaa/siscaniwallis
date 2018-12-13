@@ -1,4 +1,36 @@
   </body>
+
+<?php
+
+// $your_token = '6679894764.b0a4d90.d0905fb3e7e4490cbd886573ab2afa0b'; 
+// // if your app is not approved - always use 'self'
+// $ig_user_id = '6679894764';
+// // Instagram API connection
+// $remote_wp = wp_remote_get( "https://api.instagram.com/v1/users/".$ig_user_id."/media/recent/?access_token=".$your_token);
+// // Instagram response is JSON encoded, let's convert it to an object
+// $instagram_response = json_decode( $remote_wp['body'] );
+
+// var_dump($instagram_response);
+// // 200 OK
+// if( $remote_wp['response']['code'] == 200 ) {
+//     // echo '<pre>';
+//     // var_dump($instagram_response->data[0]->id);
+//     // echo '</pre>';
+
+//     foreach($instagram_response->data as $key => $data){
+//         echo '<img src='.$data->images->low_resolution->url.'/>';
+//         echo '<pre>';
+//         var_dump($data);
+//         echo '</pre>';
+//         echo '<br>';
+//         echo '<h1>'.'asd :'.$key.'</h1>';
+//     }
+
+// // 400 Bad Request
+// } elseif ( $remote_wp['response']['code'] == 400 ) {
+// 	echo '<b>' . $remote_wp['response']['message'] . ': </b>' . $instagram_response->meta->error_message;
+// }
+?>
         <footer>
             <div class="row full-width justify-content-center no-margin">
                 <div class="mx-auto social-network">
@@ -32,9 +64,9 @@
                 ]);
                 ?>
             </nav>
-            <div class="row full-width no-margin">
+            <div class="row full-width no-margin copyright">
                 <div class="col-12">
-                    <p class="text-center">SiscaniWallis 2018 &#169; Design AT</p>
+                    <p class="text-center no-margin">SiscaniWallis 2018 &#169; Design AT</p>
                 </div>
             </div>
             <?php wp_footer();?>
