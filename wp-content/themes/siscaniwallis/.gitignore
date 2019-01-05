@@ -1,3 +1,0 @@
-/* ignore build and node_modules folders */
-node_modules/
-vendor/
