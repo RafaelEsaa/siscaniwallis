@@ -1,6 +1,6 @@
 <?php
 // include the css file
-$cssFilePath = glob( get_template_directory() . '/css/build/app.*' );
+$cssFilePath = glob( get_template_directory() . '/css/build/main.min.css' );
 $cssFileURI = get_template_directory_uri() . '/css/build/' . basename($cssFilePath[0]);
 wp_enqueue_style( 'site_main_css', $cssFileURI );
 

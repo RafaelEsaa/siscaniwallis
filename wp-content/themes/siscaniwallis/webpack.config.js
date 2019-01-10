@@ -10,7 +10,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: ['./js/src/app.js', './css/src/app.scss'],
+  entry: ['./js/src/app.js', './css/src/app.sass'],
   output: {
     path: path.resolve(__dirname),
     filename: './js/build/app.min.js'
@@ -36,7 +36,20 @@ module.exports = {
       {
         test: /\.exec\.js$/,
         use: ['script-loader']
-      }
+      },
+      {
+        // Match woff2 and patterns like .woff?v=1.1.1.
+        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 50000,
+            mimetype: "application/font-woff",
+            name: "./font/[name].[ext]", // Output below ./fonts
+            publicPath: "./font/", // Take the directory into account
+          },
+        },
+      },
     ]
   },
   plugins: [

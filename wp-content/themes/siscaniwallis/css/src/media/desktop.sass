@@ -34,10 +34,14 @@
         text-transform: uppercase
         margin: 10px 0px
         .text-carousel-home
-            font-size: 40px
+            font-size: 38px
             padding: 20px 0px
             p
                 margin: 0px
+                font-family: 'Baskerville-Regular'
+                em
+                    font-family: 'Baskerville-Italic'
+                    font-size: 44px
     .btn-carousel
         background-color: transparent
         border-color: #fff
@@ -90,12 +94,19 @@ h5
 
 .card
     .active-bg-black
-        height: 100%
-        width: 100%
-        position: absolute
-        top: 0
         background-color: black
-        opacity: 0.5
+        -webkit-transition: ease-out 0.7s
+        transition: ease-out 0.7s
+    &:hover
+        .active-bg-black
+            height: 100%
+            width: 100%
+            position: absolute
+            top: 0
+            opacity: 0.5
+            background-color: black
+            -webkit-transition: ease-out 0.7s
+            transition: ease-out 0.7s
     .card-img-hover
         height: 100%
         width: 100%
@@ -105,7 +116,7 @@ h5
             position: absolute
             top: 50%
             left: 50%
-            transform: translate(-50%)
+            transform: translate(-50%, -50%)
     
 .row-instagram
     margin: 0px !important

@@ -19,7 +19,9 @@
                             <div class="text-carousel-home">
                                 <?php the_content(); ?>
                             </div>
-                            <button class="btn-carousel"><?php the_field('title_button')?></button>
+                            <a href="<?php the_field('url_button')?>">
+                                <button class="btn-carousel"><?php the_field('title_button')?></button>
+                            </a>
                         </div>
                     </div>
                 <?php
